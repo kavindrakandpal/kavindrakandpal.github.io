@@ -1,36 +1,227 @@
 ---
 layout: page
 ---
+
+<style>
+.button{
+        margin:20px;
+        width:200px;
+        height:75px;
+        border:2px solid;
+    }
+    .outer-btn{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+.img-fixed-height {
+  height: 300px;
+  object-fit: cover;
+}
+#mtech, #btech, #project{
+  display:none;
+}
+</style>
 <div class="post">
   <article>
     {% if page.profiles %}
-      {% for profile in page.profiles %}
-        <hr>
-        <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
-          {% if profile.image %}
-            {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
-            {% if profile.image_circular %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-            {% else %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-            {% endif %}
-            {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
-            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
-          {% endif %}
-          {% if profile.more_info %}
-            <div class="more-info">{{ profile.more_info }}</div>
-          {% endif %}
-        </div>
+   <div>
+      <h3><b>Ph.D. Students (IIITA)</b></h3>
+      <div class="row">
+        {% assign counter = 0 %}
+          {% for profile in page.profiles %}
+            {% if profile.student == 'phd' %}
 
-        <div class="clearfix">
-          {% if profile.content %}
-            {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
-            {{ profile_content | markdownify }}
-          {% else %}
-            {{ content }}
+              {% if counter == 0 %}
+                <div class="row" style="margin-bottom: 20px;">
+              {% endif %}
+              
+              <div class="col-md-12" style="margin-bottom: 20px;">
+                <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
+                  {% if profile.image %}
+                    {% assign profile_image_path = profile.image | prepend: '/assets/img/' %}
+                    {% if profile.image_circular %}
+                      {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle img-fixed-height' %}
+                    {% else %}
+                      {% assign profile_image_class = 'img-fluid z-depth-1 rounded img-fixed-height' %}
+                    {% endif %}
+                    {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+                    {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+                  {% endif %}
+                </div>
+
+                <div class="clearfix" style="padding: 30px 0px;">
+                  {% if profile.more_info %}
+                    <div class="more-info" style="margin-top: 10px;">{{ profile.more_info }}</div>
+                  {% endif %}
+                </div>
+              </div>
+
+              {% assign counter = counter | plus: 1 %}
+              {% if counter == 2 %}
+                </div>
+                {% assign counter = 0 %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+
+        {% if counter != 0 %}
+          </div>
+        {% endif %}
+      </div>
+
+   </div>
+
+
+    <div id="mtech">
+      <h3><b>M. Tech Students (IIITA)</b></h3>
+      <div class="row">
+        {% assign counter = 0 %}
+        {% for profile in page.profiles %}
+          {% if profile.student == 'mtech' %}
+            
+            <div class="col-md-12" style="margin-bottom: 20px;">
+              <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
+                {% if profile.image %}
+                  {% assign profile_image_path = profile.image | prepend: '/assets/img/' %}
+                  {% if profile.image_circular %}
+                    {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle img-fixed-height' %}
+                  {% else %}
+                    {% assign profile_image_class = 'img-fluid z-depth-1 rounded img-fixed-height' %}
+                  {% endif %}
+                  {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+                  {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+                {% endif %}
+              </div>
+
+              <div class="clearfix" style="padding: 30px 0px;">
+                {% if profile.more_info %}
+                  <div class="more-info" style="margin-top: 10px;">{{ profile.more_info }}</div>
+                {% endif %}
+              </div>
+            </div>
+
           {% endif %}
-        </div>
-      {% endfor %}
+        {% endfor %}
+
+        {% if counter != 0 %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+     
+     <div id="btech">
+      <h3><b>B. Tech Students (IIITA)</b></h3>
+      <div class="row">
+        {% assign counter = 0 %}
+        {% for profile in page.profiles %}
+          {% if profile.student == 'btech' %}
+            
+            <div class="col-md-12" style="margin-bottom: 20px;">
+              <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
+                {% if profile.image %}
+                  {% assign profile_image_path = profile.image | prepend: '/assets/img/' %}
+                  {% if profile.image_circular %}
+                    {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle img-fixed-height' %}
+                  {% else %}
+                    {% assign profile_image_class = 'img-fluid z-depth-1 rounded img-fixed-height' %}
+                  {% endif %}
+                  {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+                  {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+                {% endif %}
+              </div>
+
+              <div class="clearfix" style="padding: 30px 0px;">
+                {% if profile.more_info %}
+                  <div class="more-info" style="margin-top: 10px;">{{ profile.more_info }}</div>
+                {% endif %}
+              </div>
+            </div>
+
+          {% endif %}
+        {% endfor %}
+
+        {% if counter != 0 %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+     
+
+     <div id="project">
+      <h3><b>Project Students (Outside IIITA)</b></h3>
+      <div class="row">
+        {% assign counter = 0 %}
+        {% for profile in page.profiles %}
+          {% if profile.student == 'project' %}
+            
+            <div class="col-md-12" style="margin-bottom: 20px;">
+              <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
+                {% if profile.image %}
+                  {% assign profile_image_path = profile.image | prepend: '/assets/img/' %}
+                  {% if profile.image_circular %}
+                    {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle img-fixed-height' %}
+                  {% else %}
+                    {% assign profile_image_class = 'img-fluid z-depth-1 rounded img-fixed-height' %}
+                  {% endif %}
+                  {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+                  {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+                {% endif %}
+              </div>
+
+              <div class="clearfix" style="padding: 30px 0px;">
+                {% if profile.more_info %}
+                  <div class="more-info" style="margin-top: 10px;">{{ profile.more_info }}</div>
+                {% endif %}
+              </div>
+            </div>
+
+          {% endif %}
+        {% endfor %}
+
+        {% if counter != 0 %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+     
     {% endif %}
+ <div class="outer-btn">
+      <button id="btn1" onClick="onMtech()" class="button"><b>M.Tech Students (IIITA)</b></button>
+      <button id="btn2" onClick="onBtech()" class="button"><b>B.Tech Students (IIITA)</b></button>
+      <button id="btn3" onClick="onProject()" class="button"><b>Project Students (Outside IIITA)</b></button>
+    </div><br>
   </article>
 </div>
+
+
+<script>
+     document.getElementById("project").style.display="none";
+     document.getElementById("mtech").style.display="none";
+     document.getElementById("btech").style.display="none";
+    const onProject = () => {
+        const d = document.getElementById("project");
+        if(d.style.display === "none"){
+            d.style.display = "block";
+        }else{
+            d.style.display = "none";
+        }
+    }
+    const onMtech = () => {
+        const d = document.getElementById("mtech");
+        if(d.style.display === "none"){
+            d.style.display = "block";
+        }else{
+            d.style.display = "none";
+        }
+    }
+    const onBtech = () => {
+        const d = document.getElementById("btech");
+        if(d.style.display === "none"){
+            d.style.display = "block";
+        }else{
+            d.style.display = "none";
+        }
+    }
+</script>

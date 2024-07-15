@@ -1,35 +1,121 @@
-<div class="col">
-  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-    <div class="card h-100 hoverable">
-      {% if project.img %}
-        {%
-          include figure.liquid
-          loading="eager"
-          path=project.img
-          sizes = "250px"
-          alt="project thumbnail"
-          class="card-img-top"
-        %}
-      {% endif %}
-      <div class="card-body">
-        <h2 class="card-title">{{ project.title }}</h2>
-        <p class="card-text">{{ project.description }}</p>
-        <div class="row ml-1 mr-1 p-0">
-          {% if project.github %}
-            <div class="github-icon">
-              <div class="icon" data-toggle="tooltip" title="Code Repository">
-                <a href="{{ project.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
-              </div>
-              {% if project.github_stars %}
-                <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-                  <i class="fa-solid fa-star"></i>
-                  <span id="{{ project.github_stars }}-stars"></span>
-                </span>
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
+<style>
+/* Card Styles */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  flex-direction:column;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 0px 20px;
+}
+
+.card {
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.10), 0 2px 2px rgba(0, 0, 0, 0.10);
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
+  width: 400px; /* Adjust max-width as per your design */
+  display:flex;
+  flex-direction:row;
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.card .card-body header {
+  margin-bottom: 15px;
+}
+
+.card .card-body .title h3 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #000;
+  margin: 0.5em 0;
+}
+
+.card .card-body .pre-heading {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.card .card-body .meta {
+  color: #555;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card .card-body .chips {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card .card-body .chips .chip {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 5px 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #009dff;
+  border-radius: 25px;
+}
+
+.card .featured-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px; /* Adjust for your design */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Responsive Layout */
+@media only screen and (min-width: 768px) {
+  .card {
+    max-width: 100%;
+  width: 800px; 
+  }
+  .cards{
+    
+  padding: 30px 0px 0px 0px;
+  }
+}
+
+
+</style>
+
+<ul class="cards">
+  <li class="card">
+    <article class="card-body col-md-12">
+      <header>
+        <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+          <div class="title">
+            <h3>{{ project.title }}</h3>
+          </div>
+          <p class="meta">
+            <span class="author"><b>Funding Agency : </b>{{ project.agency }}</span><br>
+            <span class="author"><b>Duration : </b>{{ project.duration }}</span><br>
+            <span class="author"><b>Role : </b>{{ project.role }}</span><br>
+            <span class="author"><b>Approved Funds : </b>{{ project.fund }}</span><br>
+          </p>
+        </a>
+      </header>
+      <div class="chips">
+        {% for tag in project.tags %}
+          <a class="chip">{{ tag }}</a>
+        {% endfor %}
       </div>
-    </div>
-  </a>
-</div>
+    </article>
+  </li>
+</ul>

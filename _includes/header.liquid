@@ -2,8 +2,7 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/"><b>
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">
@@ -14,16 +13,15 @@
               {{- site.middle_name -}}
             {% endif %}
             {% if site.last_name %}
+            <span class="font-weight-bold">
               {{- site.last_name -}}
+              </span>
             {% endif %}
           {% else %}
             {{- site.title -}}
           {% endif %}
-        </a>
-      {% elsif site.enable_navbar_social %}
-        <!-- Social Icons -->
-        <div class="navbar-brand social">{% include social.liquid %}</div>
-      {% endif %}
+        </b></a>
+      
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed ml-auto"
@@ -40,8 +38,8 @@
         <span class="icon-bar bottom-bar"></span>
       </button>
 
-      <div class="collapse navbar-collapse text-right" id="navbarNav">
-        <ul class="navbar-nav ml-auto flex-nowrap">
+      <div class="collapse navbar-collapse text-left" id="navbarNav">
+        <ul class="navbar-nav mr-auto flex-nowrap">
           {% for page in site.pages %}
             {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
           {% endfor %}
@@ -108,14 +106,6 @@
               {% endif %}
             {% endif %}
           {% endfor %}
-          {% if site.search_enabled %}
-            <!-- Search -->
-            <li class="nav-item">
-              <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
-              </button>
-            </li>
-          {% endif %}
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
