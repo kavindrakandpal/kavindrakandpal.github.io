@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://kavindrakandpal.github.io/sitemap.xml
+Sitemap: https://profile.iiita.ac.in/kavindra/kk/p//sitemap.xml
