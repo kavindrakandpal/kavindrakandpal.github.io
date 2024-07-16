@@ -246,8 +246,8 @@ profiles:
     more_info: >
       <p><b>Mr. Kingsuk Bag<b/></p>
       <p>ID No- IEC2018001</p>
-      <p>Project-I Title: Low power charge sensitive pre-amplifier integrated with silicon nanowire biosensor</p>
-      <p>Project-II Title: IoT Enabled Cost-Effective Integrated Industrial Automation For FMCG Industry</p>
+      <p>Project-I Title: <a href="https://link.springer.com/chapter/10.1007/978-3-031-21514-8_3">Low power charge sensitive pre-amplifier integrated with silicon nanowire biosensor</a></p>
+      <p>Project-II Title: <a href="https://ieeexplore.ieee.org/document/9667570">IoT Enabled Cost-Effective Integrated Industrial Automation For FMCG Industry</a></p>
       <p>Project-III Title: FPGA Based Resource Efficient Simulation and Emulation Of Grover’s Search Algorithm</p>
       <p>Affiliation: B.Tech (ECE), 2018-22, IIITA</p>
   - align: right
@@ -257,7 +257,7 @@ profiles:
     more_info: >
       <p><b>Mr. Sharad Verma<b/></p>
       <p>ID No- IEC2018039</p>
-      <p>Project Title: Low power charge sensitive pre-amplifier integrated with silicon nanowire biosensor</p>
+      <p>Project Title: <a href="https://link.springer.com/chapter/10.1007/978-3-031-21514-8_3">Low power charge sensitive pre-amplifier integrated with silicon nanowire biosensor</a></p>
       <p>Affiliation: B.Tech (ECE), 2018-22, IIITA</p>
   - align: right
     image: kislay.jpg
@@ -266,7 +266,7 @@ profiles:
     more_info: >
       <p><b>Mr. Kislay Deep<b/></p>
       <p>ID No- IEC2018040</p>
-      <p>Project Title: Low power charge sensitive pre-amplifier integrated with silicon nanowire biosensor</p>
+      <p>Project Title: <a href="https://link.springer.com/chapter/10.1007/978-3-031-21514-8_3">Low power charge sensitive pre-amplifier integrated with silicon nanowire biosensor</a></p>
       <p>Affiliation: B.Tech (ECE), 2018-22, IIITA</p>
   - align: right
     image: jayanth.jpg
@@ -334,7 +334,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p><b>Mr. Aryamick Singh<b/></p>
-      <p>Project Title: Design of a threshold voltage insensitive 3T1C pixel circuit using a-IGZO TFT for AMOLED displays</p>
+      <p>Project Title: <a href="https://ieeexplore.ieee.org/document/9190545">Design of a threshold voltage insensitive 3T1C pixel circuit using a-IGZO TFT for AMOLED displays</a></p>
       <p>Affiliation: Department of Electrical and Electronics, BITS - Pilani</p>
       <p>Current Affiliation: Non-Volatile Engineering Group, Micron Technology</p>
   - align: right
@@ -343,7 +343,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p><b>Mr. Aditya Sodhani<b/></p>
-      <p>Project Title: Design of Pixel Circuit Using a-IGZO TFTs to Enhance Uniformity of AMOLED Displays by Threshold Voltage Compensation</p>
+      <p>Project Title: <a href="https://link.springer.com/article/10.1007/s13369-021-05457-2">Design of Pixel Circuit Using a-IGZO TFTs to Enhance Uniformity of AMOLED Displays by Threshold Voltage Compensation</a></p>
       <p>Affiliation: Department of Electrical and Electronics, BITS - Pilani</p>
       <p>Current Affiliation: Department of Electrical and Electronics, BITS - Pilani</p>
   - align: right
@@ -352,7 +352,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p><b>Mr. Nishant Gupta<b/></p>
-      <p>Internship Topic: Device-To-Circuit Integrated Design of DMFET Biosensor and Its Readout Using CMOS Pre-charge Amplifier</p>
+      <p>Internship Topic: <a href="https://ieeexplore.ieee.org/document/9342256">Device-To-Circuit Integrated Design of DMFET Biosensor and Its Readout Using CMOS Pre-charge Amplifier</a></p>
       <p>Affiliation: Department of Electrical and Electronics, BITS - Pilani</p>
       <p>Current Affiliation: Guest Student, Center for Advancing Electronics Dresden, Germany</p>
   - align: right
@@ -361,7 +361,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p><b>Mr. Mohil Desai<b/></p>
-      <p>Project Title: A Multiple-Trapping-and-Release Transport Based Threshold Voltage Model for Oxide Thin Film Transistors</p>
+      <p>Project Title: <a href="https://link.springer.com/article/10.1007/s11664-021-08907-7">A Multiple-Trapping-and-Release Transport Based Threshold Voltage Model for Oxide Thin Film Transistors</a></p>
       <p>Affiliation: Department of Electrical and Electronics, BITS - Pilani</p>
       <p>Current Affiliation: Digital Design Engineer, Texas Instruments, India</p>
   - align: right
@@ -379,7 +379,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p><b>Mr. Ravipati Shishir Choudary<b/></p>
-      <p>Project Title: A ZnO Humidity Sensor integrated with a-IGZO TFT based Preamplifier</p>
+      <p>Project Title: <a href="https://ieeexplore.ieee.org/abstract/document/9691537">A ZnO Humidity Sensor integrated with a-IGZO TFT based Preamplifier</a></p>
       <p>Affiliation: Department of Electronics and Telecommunication Engineering, IIEST Shibpur</p>
   - align: right
     image: abhiroop.png
@@ -387,7 +387,7 @@ profiles:
     image_circular: false # crops the image to make it circular
     more_info: >
       <p><b>Mr. Abhiroop Bhattacharjee<b/></p>
-      <p>Project Title: A low power, charge-sensitive preamplifier integrated with a silicon nanowire biosensor</p>
+      <p>Project Title: <a href="https://ieeexplore.ieee.org/document/9437913">A low power, charge-sensitive preamplifier integrated with a silicon nanowire biosensor</a></p>
       <p>Affiliation: Department of Electronics and Telecommunication Engineering, IIEST Shibpur</p>
       <p>Current Affiliation: PhD Research Scholar , Yale University</p>
   - align: right

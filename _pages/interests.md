@@ -35,7 +35,7 @@ nav_order: 3
 <hr>
 <h3><b>Research Interests</b></h3>
 <br>
-<img src="/al-folio/assets/img/r1.jpg">
+<img src="/assets/img/r1.jpg">
 <br>
 <ol>
 <li>Analog IC Design: Low power, high speed CMOS Operational Amplifier design, High speed comparators, current references and bandgap reference circuits design.</li>
@@ -51,6 +51,12 @@ nav_order: 3
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
   </ol>
   <div class="carousel-inner">
+  <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/img/r2.jpg" alt="A 10T SRAM Architecture with 40% Enhanced Throughput for IMC Applications Benchmarked with CIFAR-10 Dataset">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../assets/img/r3.jpg" alt="A 5T-2C Current-biased Voltage-Programmed (CBVP) Pixel circuit for AMOLED Displays">
+    </div>
     <div class="carousel-item active">
       <img class="d-block w-100" src="../assets/img/r1.png" alt="Design of DQPSK demodulator for implantable biomedical devices, V. Garg and K. Kandpal, JCSC, 2020">
     </div>
